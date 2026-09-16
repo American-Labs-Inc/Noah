@@ -1,0 +1,23 @@
+[Unit]
+Description=Noah offline AI assistant UI (e-ink + keyboard)
+After=fix-gpio-pinmux.service ollama.service systemd-user-sessions.service getty@tty1.service
+Wants=ollama.service
+Conflicts=getty@tty1.service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/aldo/noah_ui.py
+WorkingDirectory=/home/aldo
+User=root
+StandardInput=tty
+StandardOutput=journal
+StandardError=journal
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+MemoryHigh=2200M
+MemoryMax=2800M
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

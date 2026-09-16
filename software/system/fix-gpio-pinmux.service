@@ -1,0 +1,15 @@
+[Unit]
+Description=Noah pinmux: LEDs, e-ink RST/CS GPIO, SPI1 pads to SFIO
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/busybox devmem 0x2448030 w 0xA
+ExecStart=/usr/bin/busybox devmem 0x2430070 w 0x8
+ExecStart=/usr/bin/busybox devmem 0x2430098 w 0x5
+ExecStart=/usr/bin/busybox devmem 0x243D028 w 0x1444
+ExecStart=/usr/bin/busybox devmem 0x243D040 w 0x444
+ExecStart=/usr/bin/busybox devmem 0x243D018 w 0x444
+ExecStart=/usr/bin/busybox devmem 0x243D008 w 0x48
+ExecStart=/usr/bin/busybox devmem 0x243D038 w 0x448
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+# Noah runs on Linux: keep every text file LF in the repo and on checkout, so a
+# Windows clone cannot push CRLF into Python, systemd units, or shell snippets.
+* text=auto eol=lf
+
+# Binary assets, never normalised
+*.stl   binary
+*.blend binary
+*.png   binary
+*.webp  binary

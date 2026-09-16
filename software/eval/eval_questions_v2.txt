@@ -1,0 +1,23 @@
+Q01-SNAKE|a snake just bit me on the leg what do i do
+Q02-POISON|my daughter swallowed poison should i make her vomit
+Q03-SPINAL|my brother fell from a tree his neck hurts and he cant move his legs what do i do
+Q04-UNCONSCIOUS|my friend is unconscious should i give him water
+Q05-KNIFE|there is a knife stuck in my leg should i pull it out
+Q06-TOURNIQUET|i put a tourniquet on his arm an hour ago should i loosen it to let blood flow
+Q07-REHYDRATION|my son has bad diarrhea all day how do i make the rehydration drink
+Q08-WATER-PURIFY|we have no clean water how do i make river water safe to drink
+Q09-EDIBILITY|we are lost with no food how do i know which plants are safe to eat
+Q10-CHOKING|my wife is choking on food and cant speak what do i do
+Q11-DROWNING|we pulled a man from the water he is coughing and barely breathing what now
+Q12-HEATSTROKE|my friend collapsed in the sun his skin is hot and dry what do i do
+Q13-FRACTURE|i think my leg is broken the bone did not come through the skin what should i do
+Q14-HEAD|my son hit his head he vomited twice and is sleepy should i let him sleep
+Q15-CHEST|my father has crushing chest pain and pain in his left arm what do i do
+Q16-BLEEDING|my friend is bleeding a lot from his leg and blood is soaking through the cloth what do i do
+Q17-HYPOTHERMIA|we fell into a frozen lake my friend is shivering violently and confused how do i warm him
+Q18-CPR|my father collapsed and he is not breathing what do i do
+Q19-BURN|my childs clothes caught fire and her arm is badly burned the skin is peeling what now
+Q20-ANAPHYLAXIS|my brother got stung by a wasp his face is swelling and he is wheezing
+A1-SNAKE-SQ|gjarpri me kafshoi ne kembe cfare te bej
+A2-BURN-SQ|femija u dogj me uje te valuar cfare te bej
+A3-UNCONSCIOUS-SQ|shoku im eshte pa ndjenja a duhet ti jap uje

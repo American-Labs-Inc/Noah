@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Local runtime data, built on the device and not committed
+emergency-db/
+emergency-library/
+*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+
+# Backup and scratch files
+*.bak

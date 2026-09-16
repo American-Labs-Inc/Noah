@@ -1,0 +1,25 @@
+[Unit]
+Description=Noah boot splash (early e-ink loading screen)
+# Paint the loading screen as soon as the panel pads are set, long before the
+# full UI (ollama + user-sessions gate noah-ui at ~10s into userspace). Only
+# needs the panel, so it skips the default late ordering.
+DefaultDependencies=no
+Wants=fix-gpio-pinmux.service
+After=fix-gpio-pinmux.service
+# Everything the splash needs (python, PIL, numpy, eink.py, fonts) is on the
+# root fs. Gate on that, NOT local-fs.target - local-fs waits for docker's
+# mounts at ~8.5s, which is exactly the CPU storm we want to paint ahead of.
+RequiresMountsFor=/home/aldo
+Before=noah-ui.service shutdown.target
+Conflicts=shutdown.target
+
+[Service]
+Type=oneshot
+Nice=-5
+ExecStart=/usr/bin/python3 /home/aldo/noah_splash.py
+TimeoutStartSec=20
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
